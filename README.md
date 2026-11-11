@@ -12,6 +12,21 @@ python -m compileall -q workbench source_lab tests
 python -m workbench.cli inspect sources
 ```
 
+把网页样本抽成可查证的关系资料包（读取页面内全部 `application/ld+json`
+块，输出节点、带类型的边、有序列表、script 隔离记录与页面完整性摘要；
+`URL=路径` 中的 URL 是最终响应地址，相对 IRI 按它解析）：
+
+```sh
+python -m workbench.cli extract \
+  https://school.invalid/show/exhibit-a.html=sources/exhibit-a.html \
+  https://school.invalid/show/exhibit-b.html=sources/exhibit-b.html \
+  https://school.invalid/show/unsupported.html=sources/unsupported.html \
+  --crawl-version local-1 --raw-dir out/raw --out out/bundle.json
+```
+
+抽取子集边界见 [资料约定](docs/source-format.md)，输出资料包字段见
+[抽取格式](docs/extraction-format.md)。
+
 启动本地HTTP资料服务：
 
 ```sh
