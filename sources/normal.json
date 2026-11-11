@@ -1,0 +1,49 @@
+{
+  "routes": [
+    {
+      "path": "/exhibit-a.html",
+      "responses": [
+        {
+          "status": 200,
+          "headers": [
+            [
+              "Content-Type",
+              "text/html; charset=utf-8"
+            ]
+          ],
+          "file": "exhibit-a.html"
+        }
+      ]
+    },
+    {
+      "path": "/exhibit-b.html",
+      "responses": [
+        {
+          "status": 200,
+          "headers": [
+            [
+              "Content-Type",
+              "text/html; charset=utf-8"
+            ]
+          ],
+          "file": "exhibit-b.html"
+        }
+      ]
+    },
+    {
+      "path": "/unsupported.html",
+      "responses": [
+        {
+          "status": 200,
+          "headers": [
+            [
+              "Content-Type",
+              "text/html; charset=utf-8"
+            ]
+          ],
+          "file": "unsupported.html"
+        }
+      ]
+    }
+  ]
+}
